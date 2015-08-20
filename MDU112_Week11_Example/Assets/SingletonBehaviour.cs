@@ -23,7 +23,7 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour
 		}
 	}
 
-	protected void SingletonDestroy()
+	protected virtual void SingletonDestroy()
 	{
 
 	}

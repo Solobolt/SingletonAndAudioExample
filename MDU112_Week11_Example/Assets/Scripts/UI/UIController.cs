@@ -6,6 +6,8 @@ public class UIController : MonoBehaviour {
     public UICoinCounter coinCounter;
     public UITimer timer;
     public UIGameOver gameOver;
+	public UITitle title;
+	public UIFlash flash;
 
     void Awake()
     {

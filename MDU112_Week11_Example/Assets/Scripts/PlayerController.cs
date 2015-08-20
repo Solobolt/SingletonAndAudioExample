@@ -5,12 +5,20 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
     private Rigidbody2D rb;
-    private Vector2 input;
+	public Vector2 input { get; private set;}
 
     //We want to be able to disable input when the game is over, this will tell the component to stop reading input
     public bool enableInput = true;
+	public float speed = 3f;
 
-    public float speed = 3f;
+
+	public bool hasInput {
+		get
+		{
+			return input.magnitude > 0;
+				}
+	}
+
 
     void Awake()
     {
@@ -24,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if (enableInput)
         {
             //Collect input in awake, and apply it in fixed update
